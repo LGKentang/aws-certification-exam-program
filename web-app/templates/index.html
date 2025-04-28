@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Quiz</title>
+    <style>
+        /* Basic Grid Layout Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #232f3e;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Grid for the exam list */
+        .exam-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .exam-item {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 20px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-item a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .exam-item a:hover {
+            color: #ff9900;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AWS Certified Cloud Practitioner Mock Exam</h1>
+
+        <!-- Grid of exams -->
+        <div class="exam-grid">
+            {% for exam in exams %}
+                <div class="exam-item">
+                    <a href="{{ url_for('quiz', exam_number=exam.split(' ')[1]) }}">{{ exam }}</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="footer">
+            <p>Powered by LGK</p>
+        </div>
+    </div>
+
+</body>
+</html>

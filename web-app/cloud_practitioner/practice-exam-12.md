@@ -11,7 +11,7 @@ layout: exam
     - D. Private networking
 
     <details markdown=1><summary markdown='span'>Answer</summary>
-      Correct answer: A
+    Correct answer: A
     </details>
 
 2. One benefit of On-Demand Amazon Elastic Compute Cloud (Amazon EC2) pricing is:

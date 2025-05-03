@@ -71,11 +71,12 @@
     <div class="container">
         <h1>AWS Certified Cloud Practitioner Mock Exam</h1>
 
-        <!-- Grid of exams -->
         <div class="exam-grid">
             {% for exam in exams %}
                 <div class="exam-item">
-                    <a href="{{ url_for('quiz', exam_number=exam.split(' ')[1]) }}">{{ exam }}</a>
+                    <a href="{{ url_for('quiz', exam_number=exam.split(' ')[1]) }}">📝 {{ exam }}</a>
+                    <br>
+                    <a href="{{ url_for('leaderboard', exam_number=exam.split(' ')[1]) }}">🏆 View Leaderboard</a>
                 </div>
             {% endfor %}
         </div>

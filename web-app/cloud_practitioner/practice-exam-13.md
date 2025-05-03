@@ -18,7 +18,7 @@ layout: exam
 
     </details>
 
-1. Which service stores objects, provides real-time access to those objects, and offers versioning and lifecycle capabilities?
+2. Which service stores objects, provides real-time access to those objects, and offers versioning and lifecycle capabilities?
     - A. Amazon Glacier
     - B. AWS Storage Gateway
     - C. Amazon S3
@@ -32,7 +32,7 @@ layout: exam
 
     </details>
 
-1. What AWS team assists customers with accelerating cloud adoption through paid engagements in any of several specialty practice area ?
+3. What AWS team assists customers with accelerating cloud adoption through paid engagements in any of several specialty practice area ?
     - A. AWS Enterprise Support
     - B. AWS Solutions Architects
     - C. AWS Professional Services
@@ -46,7 +46,7 @@ layout: exam
 
     </details>
 
-1. A customer would like to design and build a new workload on AWS Cloud but does not have the AWS-related software technical expertise in-house. <br/>Which of the following AWS programs can a customer take advantage of to achieve that outcome?
+4. A customer would like to design and build a new workload on AWS Cloud but does not have the AWS-related software technical expertise in-house. <br/>Which of the following AWS programs can a customer take advantage of to achieve that outcome?
     - A. AWS Partner Network Technology Partners
     - B. AWS Marketplace
     - C. AWS Partner Network Consulting Partners

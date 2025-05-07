@@ -1,0 +1,403 @@
+### What is the default maximum number of MFA devices in use per AWS account (at the root account level)?
+
+- [x] 1.
+- [ ] 5.
+- [ ] 15.
+- [ ] 10.
+
+
+### Select the correct statement: Within Amazon EC2, when using Linux instances, the device name /dev/sda1 is [...].
+
+- [ ] reserved for EBS volumes.
+- [ ] recommended for EBS volumes.
+- [ ] recommended for instance store volumes.
+- [x] reserved for the root device.
+
+
+### Does Amazon Route 53 support NS Records?
+
+- [ ] Yes, it supports Name Service records.
+- [ ] No.
+- [ ] It supports only MX records.
+- [x] Yes, it supports Name Server records.
+
+
+### Your web application front end consists of multiple EC2 instances behind an Elastic Load Balancer. You configured ELB to perform health checks on these EC2 instances, if an instance fails to pass health checks, which statement will be true?
+
+- [ ] The instance gets terminated automatically by the ELB.
+- [ ] The instance gets quarantined by the ELB for root cause analysis.
+- [ ] The instance is replaced automatically by the ELB.
+- [x] The ELB stops sending traffic to the instance that failed its health check.
+
+
+### George has launched three EC2 instances inside the US-East-1a zone with his AWS account. Ray has launched two EC2 instances in the US-East-1a zone with his AWS account. Which of the below mentioned statements will help George and Ray understand the Availability Zone (AZ) concept better?
+
+- [ ] All the instances of George and Ray can communicate over a private IP with a minimal cost.
+- [x] The US-East-1a region of George and Ray can be different Availability Zones.
+- [ ] All the instances of George and Ray can communicate over a private IP without any cost.
+- [ ] The instances of George and Ray will be running in the same data centre.
+
+
+### Once again your customers are concerned about the security of their sensitive data and with their latest enquiry ask about what happens to old storage devices on AWS. What would be the best answer to this question?
+
+- [ ] AWS reformats the disks and uses them again.
+- [x] AWS uses the techniques detailed in DoD 5220.22-M to destroy data as part of the decommissioning process.
+- [ ] AWS uses their own proprietary software to destroy data as part of the decommissioning process.
+- [ ] AWS uses a 3rd party security organization to destroy data as part of the decommissioning process.
+
+
+### Which of the following are characteristics of Amazon VPC subnets? (Choose 2 answers)
+
+- [ ] Each subnet spans at least 2 Availability Zones to provide a high-availability environment.
+- [x] Each subnet maps to a single Availability Zone.
+- [ ] CIDR block mask of/25 is the smallest range supported.
+- [ ] By default, all subnets can route between each other, whether they are private or public.
+- [x] Instances in a private subnet can communicate with the Internet only if they have an Elastic IP.
+
+
+### Which AWS instance address has the following characteristics? 'If you stop an instance, its Elastic IP address is unmapped, and you must remap it when you restart the instance.'
+
+- [ ] Both A and B.
+- [ ] None of these.
+- [ ] VPC Addresses.
+- [x] EC2 Addresses.
+
+
+### You are designing a data leak prevention solution for your VPC environment. You want your VPC Instances to be able to access software depots and distributions on the Internet for product updates. The depots and distributions are accessible via third party CONs by their URLs. You want to explicitly deny any other outbound connections from your VPC instances to hosts on the internet. Which of the following options would you consider?
+
+- [x] Configure a web proxy server in your VPC and enforce URL-based ru les for outbound access Remove default routes.
+- [ ] Implement security groups and configure outbound rules to only permit traffic to software depots.
+- [ ] Move all your instances into private VPC subnets remove default routes from all routing tables and add specific routes to the software depots and distributions only.
+- [ ] Implement network access control lists to all specific destinations, with an Implicit deny as a rule.
+
+
+### What is an isolated database environment running in the cloud (Amazon RDS) called?
+
+- [x] DB Instance.
+- [ ] DB Unit.
+- [ ] DB Server.
+- [ ] DB Volume.
+
+
+### A user is sending bulk emails using AWS SES. The emails are not reaching some of the targeted audience because they are not authorized by the ISPs. How can the user ensure that the emails are all delivered?
+
+- [x] Send an email using DKIM with SE.
+- [ ] Send an email using SMTP with SE.
+- [ ] Open a ticket with AWS support to get it authorized with the IS.
+- [ ] Authorize the ISP by sending emails from the development account.
+
+
+### What's an ECU?
+
+- [ ] Extended Cluster User.
+- [ ] None of these.
+- [ ] Elastic Computer Usage.
+- [x] Elastic Compute Unit.
+
+
+### You would like to create a mirror image of your production environment in another region for disaster recovery purposes. Which of the following AWS resources do not need to be recreated in the second region? (Choose 2 answers)
+
+- [x] Route 53 Record Sets.
+- [x] IAM Roles.
+- [ ] Elastic IP Addresses (EIP).
+- [ ] EC2 Key Pairs.
+- [ ] Launch configurations.
+- [ ] Security Groups.
+
+
+### Which procedure for backing up a relational database on EC2 that is using a set of RAIDed EBS volumes for storage minimizes the time during which the database cannot be written to and results in a consistent backup?
+
+- [x] 1. Detach EBS volumes, 2. Start EBS snapshot of volumes, 3. Re-attach EBS volumes.
+- [ ] 1. Stop the EC2 Instance. 2. Snapshot the EBS volumes.
+- [ ] 1. Suspend disk 1/0, 2. Create an image of the EC2 Instance, 3. Resume disk 1/0.
+- [ ] 1. Suspend disk 1/0, 2. Start EBS snapshot of volumes, 3. Resume disk 1/0.
+- [ ] 1. Suspend disk 1/0, 2. Start EBS snapshot of volumes, 3. Wait for snapshots to complete, 4. Resume disk 1/0.
+
+
+### My Read Replica appears 'stuck' after a Multi-AZ failover and is unable to obtain or apply updates from the source DB Instance. What do I do?
+
+- [x] You will need to delete the Read Replica and create a new one to rep lace it.
+- [ ] You will need to disassociate the DB Engine and re associate it.
+- [ ] The instance should be deployed to Single AZ and then moved to Multi-AZ once again.
+- [ ] You will need to delete the DB Instance and create a new one to replace it.
+
+
+### You are setting up some IAM user policies and have also become aware that some services support resource-based permissions, which let you attach policies to the service's resources instead of to IAM users or groups. Which of the below statements is true in regards to resource-level permissions?
+
+- [ ] All services support resource-level permissions for all actions.
+- [ ] Resource-level permissions are supported by Amazon CloudFront.
+- [ ] All services support resource-level permissions only for some actions.
+- [x] Some services support resource-level permissions only for some actions.
+
+
+### You have some very sensitive data stored on AWS S3 and want to try every possible alternative to keeping it secure in regards to access control. What are the mechanisms available for access control on AWS S3?
+
+- [x] (IAM) policies, Access Control Lists (ACLs), bucket policies, and query string authentication.
+- [ ] (IAM) policies, Access Control Lists (ACLs) and bucket policies.
+- [ ] Access Control Lists (ACLs), bucket policies, and query string authentication.
+- [ ] (IAM) policies, Access Control Lists (ACLs), bucket policies, query string authentication and encryption.
+
+
+### You are implementing AWS Direct Connect. You intend to use AWS public service end points such as Amazon S3, across the AWS Direct Connect link. You want other Internet traffic to use your existing link to an Internet Service Provider. What is the correct way to configure AWS Direct connect for access to services such as Amazon S3?
+
+- [ ] Configure a public Interface on your AWS Direct Connect link. Configure a static route via your AWS Direct Connect link that points to Amazon S3 Advertise a default route to AWS using BGP.
+- [ ] Create a private interface on your AWS Direct Connect link. Configure a static route via your AWS Direct connect link that points to Amazon S3 Configure specific routes to your network in your VPC.
+- [x] Create a public interface on your AWS Direct Connect link. Redistribute BGP routes into your existing routing infrastructure; advertise specific routes for your network to AWS.
+- [ ] Create a private interface on your AWS Direct connect link. Redistribute BGP routes into your existing routing infrastructure and advertise a default route to AWS.
+
+
+### You are setting up your first Amazon Virtual Private Cloud (Amazon VPC) network so you decide you should probably use the AWS Management Console and the VPC Wizard. Which of the following is not an option for network architectures after launching the 'Start VPC Wizard' in Amazon VPC page on the AWS Management Console?
+
+- [ ] VPC with a Single Public Subnet Only.
+- [x] VPC with a Public Subnet Only and Hardware VPN Access.
+- [ ] VPC with Public and Private Subnets and Hardware VPN Access.
+- [ ] VPC with a Private Subnet Only and Hardware VPN Access.
+
+
+### True or False: A VPC contains multiple subnets, where each subnet can span multiple Availability Zones.
+
+- [ ] This is true only if requested during the set-up of VPC.
+- [x] This is true.
+- [ ] This is false.
+- [ ] This is true only for US regions.
+
+
+### Amazon RDS automated backups and DB Snapshots are currently supported for only the [...] storage engine.
+
+- [x] InnoDB.
+- [ ] MyISAM.
+
+
+### While signing in REST/ Query requests, for additional security, you should transmit your requests using Secure Sockets Layer (SSL) by using [...].
+
+- [ ] HTTP.
+- [ ] Internet Protocol Security (IPsec).
+- [ ] TLS (Transport Layer Security).
+- [x] HTTPS.
+
+
+### Out of the stripping options available for the EBS volumes, which one has the following disadvantage: 'Doubles the amount of 1/0 required from the instance to EBS compared to RAID 0, because you're mirroring all writes to a pair of volumes, limiting how much you can stripe.'?
+
+- [ ] Raid 0.
+- [x] RAID 1+0 (RAID 10).
+- [ ] Raid 1.
+- [ ] Raid.
+
+
+### Can I encrypt connections between my application and my DB Instance using SSL?
+
+- [x] Yes.
+- [ ] Only in VPC.
+- [ ] Only in certain regions.
+
+
+### Which of the following items are required to allow an application deployed on an EC2 instance to write data to a DynamoDB table? Assume that no security keys are allowed to be stored on the EC2 instance. (Choose 3 answers)
+
+- [x] Create an IAM Role that allows write access to the DynamoDB table.
+- [x] Add an IAM Role to a running EC2 instance.
+- [ ] Create an IAM User that allows write access to the Dynamo DB table.
+- [ ] Add an IAM User to a running EC2 instance.
+- [x] Launch an EC2 Instance with the IAM Role included in the launch configuration.
+
+
+### Identify a true statement about the On-Demand instances purchasing option provided by Amazon EC2.
+
+- [x] Pay for the instances that you use by the hour, with no long-term commitments or up-front payments.
+- [ ] Make a low, one-time, up-front payment for an instance, reserve it for a one- or three-year term, and pay a significantly lower hourly rate for these instances.
+- [ ] Pay for the instances that you use by the hour, with long-term commitments or up-front payments.
+- [ ] Make a high, one-time, all-front payment for an instance, reserve it for a one- or three-year term, and pay a significantly higher hourly rate for these instances.
+
+
+### When will you incur costs with an Elastic IP address (EIP)?
+
+- [ ] When an EIP is allocated.
+- [ ] When it is allocated and associated with a running instance.
+- [ ] When it is allocated and associated with a stopped instance.
+- [x] Costs are incurred regardless of whether the ElP is associated with a running instance.
+
+
+### IAM provides several policy templates you can use to automatically assign permissions to the groups you create. The [...] policy template gives the Admins group permission to access all account resources, except your AWS account information.
+
+- [ ] Read Only Access.
+- [ ] Power User Access.
+- [ ] AWS Cloud Formation Read Only Access.
+- [x] Administrator Access.
+
+
+### What does RRS stand for when talking about S3?
+
+- [ ] Redundancy Removal System.
+- [ ] Relational Rights Storage.
+- [ ] Regional Rights Standard.
+- [x] Reduced Redundancy Storage.
+
+
+### Can I change the EC2 security groups after an instance is launched in EC2-Classic?
+
+- [ ] Yes, you can change security groups after you launch an instance in EC2-Classic.
+- [x] No, you cannot change security groups after you launch an instance in EC2-Classic.
+- [ ] Yes, you can only when you remove rules from a security group.
+- [ ] Yes, you can only when you add rules to a security group.
+
+
+### Please select the Amazon EC2 resource which cannot be tagged.
+
+- [ ] Images (AMIs, kernels, RAM disks).
+- [ ] Amazon EBS volumes.
+- [x] Elastic IP addresses.
+- [ ] VPCs.
+
+
+### Does Route 53 support MX Records?
+
+- [x] Yes.
+- [ ] It supports CNAME records, but not MX records.
+- [ ] No.
+- [ ] Only Primary MX records. Secondary MX records are not supported.
+
+
+### Which of the following notification endpoints or clients are supported by Amazon Simple Notification Service? (Choose 2 answers)
+
+- [x] Email.
+- [ ] CloudFront distribution.
+- [ ] File Transfer Protocol.
+- [x] Short Message Service.
+- [ ] Simple Network Management Protocol.
+
+
+### AWS Identity and Access Management is a web service that enables Amazon Web Services (AWS) customers to manage users and user permissions in AWS. In addition to supporting IAM user policies, some services support resource-based permissions. Which of the following services are supported by resource-based permissions?
+
+- [ ] Amazon SNS, and Amazon SQS and AWS Direct Connect.
+- [ ] Amazon S3 and Amazon SQS and Amazon ElastiCache.
+- [x] Amazon S3, Amazon SNS, Amazon SQS, Amazon Glacier and Amazon EB
+- [ ] Amazon Glacier, Amazon SNS, and Amazon CloudWatch.
+
+
+### What does the following policy for Amazon EC2 do? { 'Statement':[{ 'Effect': 'Allow', 'Action':'ec2: Describe*', 'Resource':'*' }] }
+
+- [x] Allow users to use actions that start with 'Describe' over all the EC2 resources.
+- [ ] Share an AMI with a partner.
+- [ ] Share an AMI within the account.
+- [ ] Allow a group to only be able to describe, run, stop, start, and terminate instances.
+
+
+### Which IAM role do you use to grant AWS Lambda permission to access a DynamoDB Stream?
+
+- [ ] Dynamic role.
+- [ ] Invocation role.
+- [x] Execution role.
+- [ ] Event Source role.
+
+
+### Can resource record sets in a hosted zone have a different domain suffix (for example, <www.blog>. acme.com and <www.acme.ca>)?
+
+- [ ] Yes, it can have for a maximum of three different TLDs.
+- [ ] Yes.
+- [x] Yes, it can have depending on the TL.
+- [ ] No.
+
+
+### In Amazon Elastic Compute Cloud, which of the following is used for communication between instances in the same network (EC2-Classic or a VPC)?
+
+- [x] Private IP addresses.
+- [ ] Elastic IP addresses.
+- [ ] Static IP addresses.
+- [ ] Public IP addresses.
+
+
+### A user is planning to host a mobile game on EC2 which sends notifications to active users on either high score or the addition of new features. The user should get this notification when he is online on his mobile device. Which of the below mentioned AWS services can help achieve this functionality?
+
+- [x] AWS Simple Notification Service.
+- [ ] AWS Simple Email Service.
+- [ ] AWS Mobile Communication Service.
+- [ ] AWS Simple Queue Service.
+
+
+### You need to create an Amazon Machine Image (AMI) for a customer for an application which does not appear to be part of the standard AWS AMI template that you can see in the AWS console. What are the alternative possibilities for creating an AMI on AWS?
+
+- [ ] You can purchase an AMIs from a third party but cannot create your own AMI.
+- [x] You can purchase an AMIs from a third party or can create your own AMI.
+- [ ] Only AWS can create AMIs and you need to wait till it becomes available.
+- [ ] Only AWS can create AMIs and you need to request them to create one for you.
+
+
+### Will I be charged if the DB instance is idle?
+
+- [x] Yes.
+- [ ] Only is running in GovCloud.
+- [ ] Only if running in VPC.
+
+
+### Your company has been storing a lot of data in Amazon Glacier and has asked for an inventory of what is in there exactly. So you have decided that you need to download a vault inventory. Which of the following statements is incorrect in relation to Vault Operations in Amazon Glacier?
+
+- [ ] You can use Amazon Simple Notification Service (Amazon SNS) notifications to notify you when the job completes.
+- [ ] A vault inventory refers to the list of archives in a vault.
+- [x] You can use Amazon Simple Queue Service (Amazon SQS) notifications to notify you when the job completes.
+- [ ] Downloading a vault inventory is an asynchronous operation.
+
+
+### Your fortune 500 company has under taken a TCO analysis evaluating the use of Amazon S3 versus acquiring more hardware The outcome was that ail employees would be granted access to use Amazon S3 for storage of their personal documents. Which of the following will you need to consider so you can set up a solution that incorporates single sign-on from your corporate AD or LDAP directory and restricts access for each user to a designated user folder in a bucket? (Choose 3 answers)
+
+- [x] Setting up a federation proxy or identity provider.
+- [x] Using AWS Security Token Service to generate temporary tokens.
+- [ ] Tagging each folder in the bucket.
+- [x] Configuring IAM role.
+- [ ] Setting up a matching IAM user for every user in your corporate directory that needs access to a folder in the bucket.
+
+
+### Your company policies require encryption of sensitive data at rest. You are considering the possible options for protecting data while storing it at rest on an EBS data volume, attached to an EC2 instance. Which of these options would allow you to encrypt your data at rest? (Choose 3 answers)
+
+- [x] Implement third party volume encryption tools.
+- [ ] Do nothing as EBS volumes are encrypted by default.
+- [x] Encrypt data inside your applications before storing it on EBS.
+- [x] Encrypt data using native data encryption drivers at the file system level.
+- [ ] Implement SSL/TLS for all services running on the server.
+
+
+### A scope has been handed to you to set up a super fast gaming server and you decide that you will use Amazon DynamoDB as your database. For efficient access to data in a table, Amazon DynamoDB creates and maintains indexes for the primary key attributes. A secondary index is a data structure that contains a subset of attributes from a table, along with an alternate key to support Query operations. How many types of secondary indexes does DynamoDB support?
+
+- [x] 2.
+- [ ] 16.
+- [ ] 4.
+- [ ] As many as you need.
+
+
+### True or False: in Amazon Route 53, you can create a hosted zone for a top-level domain (TLD).
+
+- [x] False.
+- [ ] False, Amazon Route 53 automatically creates it for you.
+- [ ] True, only if you send an XML document with a CreateHostedZoneRequest element for TLD.
+- [ ] True.
+
+
+### You want to use AWS Import/Export to send data from your S3 bucket to several of your branch offices. What should you do if you want to send 10 storage units to AWS?
+
+- [ ] Make sure your disks are encrypted prior to shipping.
+- [ ] Make sure you format your disks prior to shipping.
+- [ ] Make sure your disks are 1TB or more.
+- [x] Make sure you submit a separate job request for each device.
+
+
+### You are deploying an application to track GPS coordinates of delivery trucks in the United States. Coordinates are transmitted from each delivery t ruck once every three seconds. You need to design an architecture that will enable real-time processing of these coordinates from multiple consumers. Which service should you use to implement data ingestion?
+
+- [x] Amazon Kinesis.
+- [ ] AWS Data Pipeline.
+- [ ] Amazon AppStream.
+- [ ] Amazon Simple Queue Service.
+
+
+### While performing the volume status checks, if the status is insufficient-data, what does it mean?
+
+- [x] The checks may still be in progress on the volume.
+- [ ] The check has passed.
+- [ ] The check has failed.
+
+
+### Can you create IAM security credentials for existing users?
+
+- [x] Yes, existing users can have security credentials associated with their account.
+- [ ] No, IAM requires that all users who have credentials set up are not existing users.
+- [ ] No, security credentials are created within GROUPS, and then users are associated to GROUPS at a later time.
+- [ ] Yes, but only IAM credentials, not ordinary security credentials.
+
+

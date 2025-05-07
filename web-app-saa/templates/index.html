@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Quiz</title>
-    <link rel="icon" href="https://firebrand.training/media/mt5hiqbn/aws-certified-cloud-practitioner-clf-c02-firebrand.png?width=768&height=768&v=1dae8e3a436dc90" type="image/png">
+    <link rel="icon" href="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*y-bIB9JgCwPgWYRT.png" type="image/png">
 
     <style>
         /* Basic Grid Layout Styles */
@@ -41,8 +40,7 @@
         }
 
         .header-content img {
-            width: 50%;
-            /* Adjust this to fit your design */
+            width: 50%;  /* Adjust this to fit your design */
             height: auto;
         }
 
@@ -83,31 +81,28 @@
         }
     </style>
 </head>
-
 <body>
 
     <div class="container">
         <div class="header-content">
-            <h1>AWS Certified Cloud Practitioner Exam</h1>
-            <img style="height: 120px; width:120px"
-                src="https://firebrand.training/media/mt5hiqbn/aws-certified-cloud-practitioner-clf-c02-firebrand.png?width=768&height=768&v=1dae8e3a436dc90"
-                alt="AWS Solutions Architect">
+            <h1>AWS Solutions Architect Associate Exam</h1>
+            <img style="height: 120px; width:120px" src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*y-bIB9JgCwPgWYRT.png" alt="AWS Solutions Architect">
         </div>
 
-        <!-- Link to SAA exam page -->
+        
+        <!-- Link to CCP exam page -->
         <div style="text-align: center; margin-bottom: 20px;">
-            <a href="https://aws.saa.lgkentang.com/" target="_blank"
-                style="font-size: 1.25rem; color: #0066cc; font-weight: bold;">AWS Certified Solutions Architect –
-                Associate (SAA) Exam</a>
+            <a href="https://aws.lgkentang.com/" target="_blank"
+                style="font-size: 1.25rem; color: #0066cc; font-weight: bold;">AWS Certified Cloud Practitioner Exam</a>
         </div>
 
         <div class="exam-grid">
             {% for exam in exams %}
-            <div class="exam-item">
-                <a href="{{ url_for('quiz', exam_number=exam.split(' ')[1]) }}">📝 {{ exam }}</a>
-                <br>
-                <a href="{{ url_for('leaderboard', exam_number=exam.split(' ')[1]) }}">🏆 View Leaderboard</a>
-            </div>
+                <div class="exam-item">
+                    <a href="{{ url_for('quiz', exam_number=exam.split(' ')[1]) }}">📝 {{ exam }}</a>
+                    <br>
+                    <a href="{{ url_for('leaderboard', exam_number=exam.split(' ')[1]) }}">🏆 View Leaderboard</a>
+                </div>
             {% endfor %}
         </div>
 
@@ -117,5 +112,4 @@
     </div>
 
 </body>
-
 </html>

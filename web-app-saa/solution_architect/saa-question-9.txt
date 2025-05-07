@@ -1,0 +1,393 @@
+### You are running a successful multitier web application on AWS and your marketing department has asked you to add a reporting tier to the application. The reporting tier will aggregate and publish status reports every 30 minutes from user-generated information that is being stored in your web application s database. You are currently running a Multi-AZ RDS MySQL instance for the database tier. You also have implemented Elasticache as a database caching layer between the application tier and database tier. Please select the answer that will allow you to successful ly implement the reporting tier with as little impact as possible to your database.
+
+- [ ] Continually send transaction logs from your master database to an S3 bucket and generate the reports off the S3 bucket using S3 byte range requests.
+- [ ] Generate the reports by querying the synchronously replicated standby RDS MySQL instance maintained through Multi-AZ.
+- [x] Launch a RDS Read Replica connected to your Multi-AZ master database and generate reports by querying the Read Replica.
+- [ ] Generate the reports by querying the ElastiCache database caching tier.
+
+
+### Can I delete a snapshot of the root device of an EBS volume used by a registered AMI?
+
+- [ ] Only via API.
+- [ ] Only via Console.
+- [x] Yes.
+- [ ] No.
+
+
+### MySQL installations default to port [...].
+
+- [x] 3306.
+- [ ] 443.
+- [ ] 80.
+- [ ] 1158.
+
+
+### In the 'Detailed ' monitoring data available for your Amazon EBS volumes, Provisioned IOPS volumes automatically send [...] minute metrics to Amazon CloudWatch.
+
+- [ ] 5.
+- [ ] 2.
+- [x] 1.
+- [ ] 3.
+
+
+### A user has deployed an application on his private cloud. The user is using his own monitoring tool. He wants to configure it so that whenever there is an error, the monitoring tool will notify him via SMS. Which of the below mentioned AWS services will help in this scenario?
+
+- [ ] AWS SES.
+- [x] AWS SNS.
+- [ ] None because the user infrastructure is in the private cloud.
+- [ ] AWS SMS.
+
+
+### What does Amazon Route 53 provide?
+
+- [ ] A global Content Delivery Network.
+- [ ] None of these.
+- [x] A scalable Domain Name System.
+- [ ] An SSH endpoint for Amazon EC2.
+
+
+### The AWS CloudHSM service defines a resource known as a high-availability (HA) [...], which is a virtual partition that represents a group of partitions, typically distributed between several physical HSMs for high-availability.
+
+- [ ] proxy group.
+- [x] partition group.
+- [ ] functional group.
+- [ ] relational group.
+
+
+### In Amazon EC2, partial instance-hours are billed [...].
+
+- [ ] per second used in the hour.
+- [ ] per minute used.
+- [ ] by combining partial segments into full hours.
+- [x] as full hours.
+
+
+### In Amazon EC2, what is the limit of Reserved Instances per Availability Zone each month?
+
+- [ ] 5.
+- [x] 20.
+- [ ] 50.
+- [ ] 10.
+
+
+### True or False: When using IAM to control access to your RDS resources, the key names that can be used are case sensitive. For example, aws: CurrentTime is NOT equivalent to AWS: currenttime.
+
+- [x] True.
+- [ ] False.
+
+
+### You need to create a JSON-formatted text file for AWS CloudFormation. This is your first template and the only thing you know is that the templates include several major sections but there is only one that is required for it to work. What is the only section required?
+
+- [ ] Mappings.
+- [ ] Outputs.
+- [x] Resources.
+- [ ] Conditions.
+
+
+### A user wants to use an EBS-backed Amazon EC2 instance for a temporary job. Based on the input data, the job is most likely to finish within a week. Which of the following steps should be followed to terminate the instance automatically once the job is finished?
+
+- [ ] Configure the EC2 instance with a stop instance to terminate it.
+- [ ] Configure the EC2 instance with ELB to terminate the instance when it remains idle.
+- [x] Configure the Cloud Watch alarm on the instance that should perform the termination action once the instance is idle.
+- [ ] Configure the Auto Scaling schedule activity that terminates the instance after 7 days.
+
+
+### You are building an automated transcription service in which Amazon EC2 worker instances process an uploaded audio file and generate a text file. You must store both of these files in the same durable storage until the text file is retrieved. You do not know what the storage capacity requirements are. Which storage option is both cost-efficient and scalable?
+
+- [ ] Multiple Amazon EBS volume with snapshots.
+- [ ] A single Amazon Glacier vault.
+- [x] A single Amazon S3 bucket.
+- [ ] Multiple instance stores.
+
+
+### Your company has recently extended its datacenter into a VPC on AVVS to add burst computing capacity as needed Members of your Network Operations Center need to be able to go to the AWSManagement Console and administer Amazon EC2 instances as necessary You don't want to create new IAM users for each NOC member and make those users sign in again to the AWS Management Console Which option below will meet the needs for your NOC members?
+
+- [ ] Use OAuth 2 0 to retrieve temporary AWS security credentials to enable your NOC members to sign in to the AVVS Management Console.
+- [ ] Use web Identity Federation to retrieve AWS temporary security credentials to enable your NOC members to sign in to the AWS Management Console.
+- [ ] Use your on-premises SAML 2.0-compliant identity provider (IOP) to grant the NOC members federated access to the AWS Management Console via the AWS sing le sign-on (550) endpoint.
+- [x] Use your on-premises SAML2.0-compliam identity provider (IOP) to retrieve temporary security credentials to enable NOC members to sign in to the AWS Management Console.
+
+
+### You have just set up your first Elastic Load Balancer (ELB) but it does not seem to be configured properly. You discover that before you start using ELB, you have to configure the listeners for your load balancer. Which protocols does ELB use to support the load balancing of applications?
+
+- [ ] HTTP and HTTPS.
+- [ ] HTTP, HTTPS, TCP, SSL and SSH.
+- [x] HTTP, HTTPS, TCP, and SSL.
+- [ ] HTTP, HTTPS, TCP, SSL and SFTP.
+
+
+### A t2.medium EC2 instance type must be launched with what type of Amazon Machine Image (AMI)?
+
+- [x] An Instance store Hardware Virtual Machine AMI.
+- [ ] An Instance store Paravirtual AMI.
+- [ ] An Amazon EBS-backed Hardware Virtual Machine AMI.
+- [ ] An Amazon EBS-backed Paravirtual AMI.
+
+
+### A user has created a subnet in VPC and launched an EC2 instance within it. The user has not selected the option to assign the IP address while launching the instance. The user has 3 elastic IPs and is trying to assign one of the Elastic IPs to the VPC instance from the console. The console does not show any instance in the IP assignment screen. What is a possible reason that the instance is unavailable in the assigned IP console?
+
+- [ ] The IP address may be attached to one of the instances.
+- [ ] The IP address belongs to a different zone than the subnet zone.
+- [ ] The user has not created an internet gateway.
+- [x] The IP addresses belong to EC2 Classic; so they cannot be assigned to VPC.
+
+
+### Will I be alerted when automatic fail over occurs?
+
+- [ ] Only if SNS configured.
+- [x] Yes.
+- [ ] No.
+- [ ] Only if Cloud watch configured.
+
+
+### Amazon EC2 provides a [...]. It is an HTTP or HTTPS request that uses the HTTP verbs GET or POST.
+
+- [ ] web database.
+- [ ] .NET framework.
+- [x] Query API.
+- [ ] C library.
+
+
+### Which of the following requires a custom Cloud Watch metric to monitor?
+
+- [ ] Memory Utilization of an EC2 instance.
+- [ ] CPU Utilization of an EC2 instance.
+- [x] Disk usage activity of an EC2 instance.
+- [ ] Data transfer of an EC2 instance.
+
+
+### An International company has deployed a multi-tier web application that relies on DynamoDB in a single region For regulatory reasons they need disaster recovery capability in a separate region with a Recovery Time Objective of 2 hours and a Recovery Point Objective of 24 hours They should synchronize their data on a regular basis and be able to provision me web application rapidly using CloudFormation. The objective is to minimize changes to the existing web application, control the throughput of DynamoDB used for the synchronization of data and synchronize only the modified elements. Which design would you choose to meet these requirements?
+
+- [x] Use AWS data Pipeline to schedule a DynamoDB cross region copy once a day. create a Last updated' attribute in your DynamoDB table that would represent the timestamp of the last update and use it as a filter.
+- [ ] Use EMR and write a custom script to retrieve data from DynamoDB in the current region using a SCAN operation and push it to Dynamo DB in the second region.
+- [ ] Use AWS data Pipeline to schedule an export of the DynamoDB table to S3 in the current region once a day then schedule another task immediately after it that will import data from S3 to DynamoDB in the other region.
+- [ ] Send also each Ante into an SQS queue in me second region; use an auto-scaling group behind the SQS queue to replay the write in the second region.
+
+
+### An Elastic IP address (EIP) is a static IP address designed for dynamic cloud computing. With an EIP, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account. Your EIP is associated with your AWS account, not a particular EC2 instance, and it remains associated with your account until you choose to explicitly release it. By default how many EIPs is each AWS account limited to on a per region basis?
+
+- [ ] 1.
+- [x] 5.
+- [ ] Unlimited.
+- [ ] 10.
+
+
+### Which Amazon Storage behaves like raw, unformatted, external block devices that you can attach to your instances?
+
+- [ ] None of these.
+- [ ] Amazon Instance Storage
+- [x] Amazon EBS
+- [ ] All of these.
+
+
+### You currently operate a web application in the AWS US-East region The application runs on an autoscaled layer of EC2 instances and an RDS Multi-AZ database Your IT security compliance officer has tasked you to develop a reliable and durable logging solution to track changes made to your EC2.1AM And RDS resources. The solution must ensure the integrity and confidentiality of your log data. Which of these solutions would you recommend?
+
+- [x] Create a new CloudTrail trail with one new S3 bucket to store the logs and with the global services option selected Use IAM roles S3 bucket policies and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.
+- [ ] Create a new CloudTrail with one new S3 bucket to store the logs Configure SNS to send log file delivery notifications to your management system Use IAM roles and S3 bucket policies on the S3 bucket mat stores your logs.
+- [ ] Create a new CloudTrail trail with an existing S3 bucket to store the logs and with the global services option selected Use S3 ACLs and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.
+- [ ] Create three new CloudTrail trails with three new S3 buckets to store the logs one for the AWS Management console, one for AWS SDKs and one for command line tools Use IAM roles and S3 bucket policies on the S3 buckets that store your logs.
+
+
+### Does DynamoDB support in-place atomic updates?
+
+- [x] Yes.
+- [ ] No.
+- [ ] It does support in-place non-atomic updates.
+- [ ] It is not defined.
+
+
+### Which of the following is true of Amazon EC2 security group?
+
+- [ ] You can modify the outbound rules for EC2-Classic.
+- [ ] You can modify the rules for a security group only if the security group controls the traffic for just one instance.
+- [ ] You can modify the rules for a security group only when a new instance is created.
+- [x] You can modify the rules for a security group at any time.
+
+
+### You need to set up security for your VPC and you know that Amazon VPC provides two features that you can use to increase security for your VPC: security groups and network access control lists (ACLs). You have already looked into security groups and you are now trying to understand ACLs. Which statement below is incorrect in relation to ACLs?
+
+- [ ] Supports allow rules and deny rules.
+- [x] Is stateful: Return traffic is automatically allowed, regardless of any rules.
+- [ ] Processes rules in number order when deciding whether to allow traffic.
+- [ ] Operates at the subnet level (second layer of defense).
+
+
+### A user is trying to launch a similar EC2 instance from an existing instance with the option 'Launch More like this'. The AMI of the selected instance is deleted. What will happen in this case?
+
+- [ ] AWS does not need an AMI for the 'Launch more like this' option.
+- [ ] AWS will launch the instance but will not create a new AMI.
+- [ ] AWS will create a new AMI and launch the instance.
+- [x] AWS will throw an error saying that the AMI is deregistered.
+
+
+### True or False: When you use the AWS Management Console to delete an IAM user, IAM also deletes any signing certificates and any access keys belonging to the user.
+
+- [ ] False.
+- [ ] This is configurable.
+- [x] True.
+
+
+### You are working with a customer who is using Chef configuration management in their data center. Which service is designed to let the customer leverage existing Chef recipes in AWS?
+
+- [ ] Amazon Simple Workflow Service.
+- [ ] AWS Elastic Beanstalk.
+- [ ] AWS CloudFormation.
+- [x] AWS OpsWorks.
+
+
+### Does Amazon RDS for SQL Server currently support importing data into the msdb database?
+
+- [ ] Yes.
+- [x] No.
+
+
+### How can an EBS volume that is currently attached to an EC2 instance be migrated from one Availability Zone to another?
+
+- [ ] Detach the volume and attach it to another EC2 instance in the other AZ.
+- [ ] Simply create a new volume in the other AZ and specify the original volume as the source.
+- [x] Create a snapshot of the volume, and create a new volume from the snapshot in the other AZ.
+- [ ] Detach the volume, then use the ec2-migrate-voiume command to move it to another AZ.
+
+
+### Having set up a website to automatically be redirected to a backup website if it fails, you realize that there are different types of failovers that are possible. You need all your resources to be available the majority of the time. Using Amazon Route 53 which configuration would best suit this requirement?
+
+- [x] Active-active failover.
+- [ ] None. Route 53 can't failover.
+- [ ] Active-passive failover.
+- [ ] Active-active-passive and other mixed configurations.
+
+
+### A client application requires operating system privileges on a relational database server. What is an appropriate configuration for a highly available database architecture?
+
+- [ ] A standalone Amazon EC2 instance.
+- [ ] Amazon RDS in a Multi-AZ configuration.
+- [ ] Amazon EC2 instances in a replication configuration utilizing a single Availability Zone.
+- [x] Amazon EC2 instances in a replication configuration utilizing two different Availability Zones.
+
+
+### Is decreasing the storage size of a DB Instance permitted?
+
+- [ ] Depends on the ROMS used.
+- [x] Yes.
+- [ ] No.
+
+
+### Can you encrypt EBS volumes?
+
+- [x] Yes, you can enable encryption when you create a new EBS volume using the AWS Management Console, API, or CLI.
+- [ ] No, you should use a third-party software to perform raw block-level encryption of an EBS volume.
+- [ ] Yes, but you must use a third-party API for encrypting data before it's loaded on EBS.
+- [ ] Yes, you can encrypt with the special 'ebs_encrypt' command through Amazon APIs.
+
+
+### You must assign each server to at least [...] security group.
+
+- [ ] 3.
+- [ ] 2.
+- [ ] 4.
+- [x] 1.
+
+
+### Is the encryption of connections between my application and my DB Instance using SSL for the MySQL server engines available?
+
+- [x] Yes.
+- [ ] Only in VPC.
+- [ ] Only in certain regions.
+- [ ] No.
+
+
+### Your manager has come to you saying that he is very confused about the bills he is receiving from AWS as he is getting different bills for every user and needs you to look into making it more understandable. Which of the following would be the best solution to meet his request?
+
+- [ ] AWS Billing Aggregation.
+- [x] Consolidated Billing.
+- [ ] Deferred Billing.
+- [ ] Aggregated Billing.
+
+
+### Regarding Amazon Route 53, if your application is running on Amazon EC2 instances in two or more Amazon EC2 regions and if you have more than one Amazon EC2 instance in one or more regions, you can use [...] to route traffic to the correct region and then use [...] route traffic to instances within the region, based on probabilities that you specify.
+
+- [ ] weighted-based routing; alias resource record sets.
+- [x] latency-based routing; weighted resource record sets.
+- [ ] weighted-based routing; weighted resource record sets.
+- [ ] latency-based routing; alias resource record sets.
+
+
+### If I scale the storage capacity provisioned to my DB Instance by mid of a billing month, how will I be charged?
+
+- [ ] You will be charged for the highest storage capacity you have used.
+- [x] On a proration basis.
+
+
+### When using the following AWS services, which should be implemented in multiple Availability Zones for high availability solutions? (Choose 2 answers)
+
+- [ ] Amazon Dynamo DB.
+- [x] Amazon Elastic Compute Cloud (EC2).
+- [x] Amazon Elastic Load Balancing.
+- [ ] Amazon Simple Notification Service (SNS).
+- [ ] Amazon Simple Storage Service (S3).
+
+
+### A customer is hosting their company website on a cluster of web servers that are behind a public facing load balancer. The customer also uses Amazon Route 53 to manage their public DNS. How should the customer configure the DNS zone apex record to point to the load balancer?
+
+- [ ] Create an A record pointing to the IP address of the load balancer.
+- [ ] Create a CNAME record pointing to the load balancer DNS name.
+- [x] Create a CNAME record aliased to the load balancer DNS name.
+- [ ] Create an A record aliased to the load balancer DNS name.
+
+
+### True or False: REST or Query requests are HTTP or HTTPS requests that use an HTTP verb (such as GET or POST) and a parameter named Action or Operation that specifies the API you are calling.
+
+- [ ] True.
+- [x] False.
+
+
+### Which of the following features ensures even distribution of traffic to Amazon EC2 instances in multiple Availability Zones registered with a load balancer?
+
+- [x] Elastic Load Balancing request routing.
+- [ ] An Amazon Route 53 weighted routing policy.
+- [ ] Elastic Load Balancing cross-zone load balancing.
+- [ ] An Amazon Route 53 latency routing policy.
+
+
+### Groups can't [...].
+
+- [ ] be nested more than 3 levels.
+- [x] be nested at all.
+- [ ] be nested more than 4 levels.
+- [ ] be nested more than 2 levels.
+
+
+### You have been using T2 instances as your CPU requirements have not been that intensive. However you now start to think about larger instance types and start looking at M1 and M3 instances. You are a little confused as to the differences between them as they both seem to have the same ratio of CPU and memory. Which statement below is incorrect as to why you would use one over the other?
+
+- [ ] M3 instances are less expensive than M1 instances.
+- [x] M3 instances are configured with more swap memory than M1 instances.
+- [ ] M3 instances provide better, more consistent performance that M1 instances for most use-cases.
+- [ ] M3 instances also offer SSD-based instance storage that delivers higher I/O performance.
+
+
+### Do the system resources on the Micro instance meet the recommended configuration for Oracle?
+
+- [ ] Yes, completely.
+- [x] Yes, but only for certain situations.
+
+
+### Which of the following are true regarding AWS CloudTrail? (Choose 3 answers)
+
+- [ ] CloudTrail is enabled globally.
+- [ ] CloudTrail is enabled by default.
+- [x] CloudTrail is enabled on a per-region basis.
+- [x] CloudTrail is enabled on a per-service basis.
+- [x] Logs can be delivered to a single Amazon S3 bucket for aggregation.
+- [ ] CloudTrail is enabled for all available services within a region.
+- [ ] Logs can only be processed and delivered to the region in which they are generated.
+
+
+### If you're unable to connect via SSH to your EC2 instance, which of the following should you check and possibly correct to restore connectivity?
+
+- [ ] Adjust Security Group to permit egress traffic over TCP port 443 from your IP.
+- [ ] Configure the JAM role to permit changes to security group settings.
+- [ ] Modify the instance security group to allow ingress of ICMP packets from your IP.
+- [x] Adjust the instance's Security Group to permit ingress traffic over port 22 from your IP.
+- [ ] Apply the most recently released Operating System security patches.
+
+

@@ -1,0 +1,84 @@
+### A company has a production workload that runs on 1,000 Amazon EC2 Linux instances. The workload is powered by third-party software. The company needs to patch the third-party software on all EC2 instances as quickly as possible to remediate a critical security vulnerability. What should a solutions architect do to meet these requirements?
+
+- [ ] Create an AWS Lambda function to apply the patch to all EC2 instances.
+- [ ] Configure AWS Systems Manager Patch Manager to apply the patch to all EC2 instances.
+- [ ] Schedule an AWS Systems Manager maintenance window to apply the patch to all EC2 instances.
+- [x] Use AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances.
+
+
+### A company uses Amazon RDS for PostgreSQL databases for its data tier. The company must implement password rotation for the databases. Which solution meets this requirement with the LEAST operational overhead?
+
+- [x] Store the password in AWS Secrets Manager. Enable automatic rotation on the secret.
+- [ ] Store the password in AWS Systems Manager Parameter Store. Enable automatic rotation on the parameter.
+- [ ] Store the password in AWS Systems Manager Parameter Store. Write an AWS Lambda function that rotates the password.
+- [ ] Store the password in AWS Key Management Service (AWS KMS). Enable automatic rotation on the customer master key (CMK).
+
+
+### A company runs its application on Oracle Database Enterprise Edition. The company needs to migrate the application and the database to AWS. The company can use the Bring Your Own License (BYOL) model while migrating to AWS. The application uses third-party database features that require privileged access. A solutions architect must design a solution for the database migration. Which solution will meet these requirements MOST cost-effectively?
+
+- [ ] Migrate the database to Amazon RDS for Oracle by using native tools. Replace the third-party features with AWS Lambda.
+- [x] Migrate the database to Amazon RDS Custom for Oracle by using native tools. Customize the new database settings to support the third-party features.
+- [ ] Migrate the database to Amazon DynamoDB by using AWS Database Migration Service (AWS DMS). Customize the new database settings to support the third-party features.
+- [ ] Migrate the database to Amazon RDS for PostgreSQL by using AWS Database Migration Service (AWS DMS). Rewrite the application code to remove the dependency on third-party features.
+
+
+### A company has deployed a multi-account strategy on AWS by using AWS Control Tower. The company has provided individual AWS accounts to each of its developers. The company wants to implement controls to limit AWS resource costs that the developers incur. Which solution will meet these requirements with the LEAST operational overhead?
+
+- [ ] Instruct each developer to tag all their resources with a tag that has a key of CostCenter and a value of the developer's name. Use the required-tags AWS Config managed rule to check for the tag. Create an AWS Lambda function to terminate resources that do not have the tag. Configure AWS Cost Explorer to send a daily report to each developer to monitor their spending.
+- [x] Use AWS Budgets to establish budgets for each developer account. Set up budget alerts for actual and forecast values to notify developers when they exceed or expect to exceed their assigned budget. Use AWS Budgets actions to apply a DenyAll policy to the developer's IAM role to prevent additional resources from being launched when the assigned budget is reached.
+- [ ] Use AWS Cost Explorer to monitor and report on costs for each developer account. Configure Cost Explorer to send a daily report to each developer to monitor their spending. Use AWS Cost Anomaly Detection to detect anomalous spending and provide alerts.
+- [ ] Use AWS Service Catalog to allow developers to launch resources within a limited cost range. Create AWS Lambda functions in each AWS account to stop running resources at the end of each work day. Configure the Lambda functions to resume the resources at the start of each work day.
+
+
+### A solutions architect is designing an application that will allow business users to upload objects to Amazon S3. The solution needs to maximize object durability. Objects also must be readily available at any time and for any length of time. Users will access objects frequently within the first 30 days after the objects are uploaded, but users are much less likely to access objects that are older than 30 days. Which solution meets these requirements MOST cost-effectively?
+
+- [ ] Store all the objects in S3 Standard with an S3 Lifecycle rule to transition the objects to S3 Glacier after 30 days.
+- [x] Store all the objects in S3 Standard with an S3 Lifecycle rule to transition the objects to S3 Standard-Infrequent Access (S3 Standard-IA) after 30 days.
+- [ ] Store all the objects in S3 Standard with an S3 Lifecycle rule to transition the objects to S3 One Zone-Infrequent Access (S3 One Zone-IA) after 30 days.
+- [ ] Store all the objects in S3 Intelligent-Tiering with an S3 Lifecycle rule to transition the objects to S3 Standard-Infrequent Access (S3 Standard-IA) after 30 days.
+
+
+### A solutions architect is designing a three-tier web application. The architecture consists of an internet-facing Application Load Balancer (ALB) and a web tier that is hosted on Amazon EC2 instances in private subnets. The application tier with the business logic runs on EC2 instances in private subnets. The database tier consists of Microsoft SQL Server that runs on EC2 instances in private subnets. Security is a high priority for the company. Which combination of security group congurations should the solutions architect use? (Choose three.)
+
+- [x] Configure the security group for the web tier to allow inbound HTTPS traffic from the security group for the ALB.
+- [ ] Configure the security group for the web tier to allow outbound HTTPS traffic to 0.0.0.0/0.
+- [x] Configure the security group for the database tier to allow inbound Microsoft SQL Server traffic from the security group for the application tier.
+- [ ] Configure the security group for the database tier to allow outbound HTTPS traffic and Microsoft SQL Server trac to the security group for the web tier.
+- [x] Configure the security group for the application tier to allow inbound HTTPS traffic from the security group for the web tier.
+- [ ] Configure the security group for the application tier to allow outbound HTTPS traffic and Microsoft SQL Server traffic to the security group for the web tier.
+
+
+### A company has released a new version of its production application. The company's workload uses Amazon EC2, AWS Lambda, AWS Fargate, and Amazon SageMaker. The company wants to cost optimize the workload now that usage is at a steady state. The company wants to cover the most services with the fewest savings plans. Which combination of savings plans will meet these requirements? (Choose two.)
+
+- [ ] Purchase an EC2 Instance Savings Plan for Amazon EC2 and SageMaker.
+- [ ] Purchase a Compute Savings Plan for Amazon EC2, Lambda, and SageMaker.
+- [x] Purchase a SageMaker Savings Plan.
+- [x] Purchase a Compute Savings Plan for Lambda, Fargate, and Amazon EC2.
+- [ ] Purchase an EC2 Instance Savings Plan for Amazon EC2 and Fargate.
+
+
+### A company uses a Microsoft SQL Server database. The company's applications are connected to the database. The company wants to migrate to an Amazon Aurora PostgreSQL database with minimal changes to the application code. Which combination of steps will meet these requirements? (Choose two.)
+
+- [ ] Use the AWS Schema Conversion Tool (AWS SCT) to rewrite the SQL queries in the applications.
+- [x] Enable Babelfish on Aurora PostgreSQL to run the SQL queries from the applications.
+- [x] Migrate the database schema and data by using the AWS Schema Conversion Tool (AWS SCT) and AWS Database Migration Service (AWS DMS).
+- [ ] Use Amazon RDS Proxy to connect the applications to Aurora PostgreSQL.
+- [ ] Use AWS Database Migration Service (AWS DMS) to rewrite the SQL queries in the applications.
+
+
+### A company plans to rehost an application to Amazon EC2 instances that use Amazon Elastic Block Store (Amazon EBS) as the attached storage. A solutions architect must design a solution to ensure that all newly created Amazon EBS volumes are encrypted by default. The solution must also prevent the creation of unencrypted EBS volumes. Which solution will meet these requirements?
+
+- [ ] Configure the EC2 account attributes to always encrypt new EBS volumes.
+- [x] Use AWS Config. Configure the encrypted-volumes identifier. Apply the default AWS Key Management Service (AWS KMS) key.
+- [ ] Configure AWS Systems Manager to create encrypted copies of the EBS volumes. Reconfigure the EC2 instances to use the encrypted volumes.
+- [ ] Create a customer managed key in AWS Key Management Service (AWS KMS). Configure AWS Migration Hub to use the key when the company migrates workloads.
+
+
+### An ecommerce company wants to collect user clickstream data from the company's website for real-time analysis. The website experiences fluctuating traffic patterns throughout the day. The company needs a scalable solution that can adapt to varying levels of traffic. Which solution will meet these requirements?
+
+- [x] Use a data stream in Amazon Kinesis Data Streams in on-demand mode to capture the clickstream data. Use AWS Lambda to process the data in real time.
+- [ ] Use Amazon Kinesis Data Firehose to capture the clickstream data. Use AWS Glue to process the data in real time.
+- [ ] Use Amazon Kinesis Video Streams to capture the clickstream data. Use AWS Glue to process the data in real time.
+- [ ] Use Amazon Managed Service for Apache Flink (previously known as Amazon Kinesis Data Analytics) to capture the clickstream data. Use AWS Lambda to process the data in real time.
+
+

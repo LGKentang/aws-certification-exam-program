@@ -1,5 +1,5 @@
 services:
-  flask-quiz-app-ccp:
+  flask-quiz-app-saa:
     build: .
     ports:
       - "5000:5000"
@@ -8,4 +8,4 @@ services:
       - FLASK_RUN_HOST=0.0.0.0
     volumes:
       - ./exam_results.txt:/app/exam_results.txt
-      - ./cloud_practitioner/:/app/cloud_practitioner/
+      - ./solution_architect/:/app/solution_architect/

@@ -1,0 +1,398 @@
+### What is the maximum write throughput I can provision for a single Dynamic DB table?
+
+- [ ] 1,000 write capacity units.
+- [ ] 100,000 write capacity units.
+- [x] Dynamic DB is designed to scale without limits, but if you go beyond 10,000 you have to contact AWS first.
+- [ ] 10,000 write capacity units.
+
+
+### Do Amazon EBS volumes persist independently from the running life of an Amazon EC2 instance?
+
+- [ ] Yes, they do but only if they are detached from the instance.
+- [ ] No, you cannot attach EBS volumes to an instance.
+- [ ] No, they are dependent.
+- [x] Yes, they do.
+
+
+### What is a Security Group?
+
+- [ ] None of these.
+- [ ] A list of users that can access Amazon EC2 instances.
+- [ ] An Access Control List (ACL) for AWS resources.
+- [x] A firewall for inbound traffic, built-in around every Amazon EC2 instance.
+
+
+### You need to set up a high level of security for an Amazon Relational Database Service (RDS) you have just built in order to protect the confidential information stored in it. What are all the possible security groups that RDS uses?
+
+- [x] DB security groups, VPC security groups, and EC2 security groups.
+- [ ] DB security groups only.
+- [ ] EC2 security groups only.
+- [ ] VPC security groups, and EC2 security groups.
+
+
+### In the 'Detailed' monitoring data available for your Amazon EBS volumes, Provisioned IOPS volumes automatically send [...] minute metrics to Amazon CloudWatch.
+
+- [ ] 3.
+- [x] 1.
+- [ ] 5.
+- [ ] 2.
+
+
+### You are looking at ways to improve some existing infrastructure as it seems a lot of engineering resources are being taken up with basic management and monitoring tasks and the costs seem to be excessive. You are thinking of deploying Amazon ElasticCache to help. Which of the following statements is true in regards to ElasticCache?
+
+- [ ] You can improve load and response times to user actions and queries however the cost associated with scaling web applications will be more.
+- [ ] You can't improve load and response times to user actions and queries but you can reduce the cost associated with scaling web applications.
+- [ ] You can improve load and response times to user actions and queries however the cost associated with scaling web applications will remain the same.
+- [x] You can improve load and response times to user actions and queries and also reduce the cost associated with scaling web applications.
+
+
+### A customer needs corporate IT governance and cost oversight of all AWS resources consumed by its divisions. The divisions want to maintain administrative control of the discrete AWS resources they consume and keep those resources separate from the resources of other divisions. Which of the following options, when used together will support the autonomy/control of divisions while enabling corporate IT to maintain governance and cost oversight? (Choose 2 answers)
+
+- [ ] Use AWS Consolidated Billing and disable AWS root account access for the child accounts.
+- [ ] Enable IAM cross-account access for all corporate IT administrators in each child account.
+- [ ] Create separate VPCs for each division within the corporate IT AWS account.
+- [x] Use AWS Consolidated Billing to link the divisions' accounts to a parent corporate account.
+- [x] Write all child AWS CloudTrail and Amazon CloudWatch logs to each child account's Amazon S3 'Log' bucket.
+
+
+### After creating a new IAM user which of the following must be done before they can successfully make API calls?
+
+- [ ] Add a password to the user.
+- [ ] Enable Multi-Factor Authentication for the user.
+- [ ] Assign a Password Policy to the user.
+- [x] Create a set of Access Keys for the user.
+
+
+### A friend wants you to set up a small BitTorrent storage area for him on Amazon S3. You tell him it is highly unlikely that AWS would allow such a thing in their infrastructure. However you decide to investigate. Which of the following statements best describes using BitTorrent with Amazon S3?
+
+- [ ] Amazon S3 does not support the BitTorrent protocol because it is used for pirated software.
+- [ ] You can use the BitTorrent protocol but only for objects that are less than 100 GB in size.
+- [ ] You can use the BitTorrent protocol but you need to ask AWS for specific permissions first.
+- [x] You can use the BitTorrent protocol but only for objects that are less than 5 GB in size.
+
+
+### IAM's Policy Evaluation Logic always starts with a default [...] for every request, except for those that use the AWS account's root security credentials?
+
+- [ ] Permit.
+- [x] Deny.
+- [ ] Cancel.
+
+
+### You have been given a scope to deploy some AWS infrastructure for a large organization. The requirements are that you will have a lot of EC2 instances but may need to add more when the average utilization of your Amazon EC2 fleet is high and conversely remove them when CPU utilization is low. Which AWS services would be best to use to accomplish this?
+
+- [ ] Auto Scaling, Amazon CloudWatch and AWS Elastic Beanstalk.
+- [x] Auto Scaling, Amazon CloudWatch and Elastic Load Balancing.
+- [ ] Amazon CloudFront, Amazon CloudWatch and Elastic Load Balancing.
+- [ ] AWS Elastic Beanstalk, Amazon CloudWatch and Elastic Load Balancing.
+
+
+### When does the billing of an Amazon EC2 system begin?
+
+- [ ] It starts when the Status column for your distribution changes from Creating to Deployed.
+- [ ] It starts as soon as you click the create instance option on the main EC2 console.
+- [ ] It starts when your instance reaches 720 instance hours.
+- [x] It starts when Amazon EC2 initiates the boot sequence of an AMI instance.
+
+
+### A user is storing a large number of objects on AWS S3. The user wants to implement the search functionality among the objects. How can the user achieve this?
+
+- [ ] Use the indexing feature of S3.
+- [ ] Tag the objects with the metadata to search on that.
+- [ ] Use the query functionality of S3.
+- [x] Make your own DB system which stores the S3 metadata for the search functionality.
+
+
+### A corporate web application is deployed within an Amazon Virtual Private Cloud (VPC) and is connected to the corporate data center via an IPsec VPN. The application must authenticate against the on-premises LDAP server. After authentication, each logged-in user can only access an Amazon Simple Storage Space (S3) keyspace specific to that user. Which two approaches can satisfy these objectives? (Choose 2 answers)
+
+- [ ] Develop an identity broker that authenticates against IAM security Token service to assume a Lam role in order to get temporary AWS security credentials The application calls the identity broker toget AWS temporary security credentials with access to the appropriate S3 bucket.
+- [x] The application authenticates against LDAP and retrieves the name of an IAM role associated with the user. The application then ca lls the IAM Security Token Service to assume that IAM role The application can use the temporary credentials to access the appropriate S3 bucket.
+- [x] Develop an identity broker that authenticates against LDAP and then calls IAM Security To ken Service to get IAM federated user credentials The application calls the identity broker to get IAMfederated user credentials with access to the appropriate S3 bucket.
+- [ ] The application authenticates against LDAP the application then calls the AWS identity and Access Management (IAM) Security service to log in to IAM using the LDAP credentials the application can use the IAM temporary credentials to access the appropriate S3 bucket.
+- [ ] The application authenticates against IAM Security Token Service using the LDAP credentials the application uses those temporary AWS security credentials to access the appropriate S3 bucket.
+
+
+### A group can contain many users. Can a user belong to multiple groups?
+
+- [x] Yes always.
+- [ ] No.
+- [ ] Yes but only if they are using two factor authentication.
+- [ ] Yes but only in VPC.
+
+
+### Does Dynamo DB support in-place atomic updates?
+
+- [ ] It is not defined.
+- [x] Yes.
+- [ ] It does support in-place non-atomic updates.
+
+
+### Can you move a Reserved Instance from one Availability Zone to another?
+
+- [x] Yes, but each Reserved Instance is associated with a specific Region that cannot be changed.
+- [ ] Yes, only in US-West-2.
+- [ ] Yes, only in US-East-1.
+- [ ] No.
+
+
+### You want to establish a dedicated network connection from your premises to AWS in order to save money by transferring data directly to AWS rather than through your internet service provider. You are sure there must be some other benefits beyond cost savings. Which of the following statements would be the best choice to put your client's mind at rest?
+
+- [ ] Different instances running on the same physical machine are isolated from each other via a 256-bit Advanced Encryption Standard (AES-256).
+- [ ] Different instances running on the same physical machine are isolated from each other via the Xen hypervisor and via a 256-bit Advanced Encryption Standard (AES-256).
+- [x] Different instances running on the same physical machine are isolated from each other via the Xen hypervisor.
+- [ ] Different instances running on the same physical machine are isolated from each other via IAM permissions.
+
+
+### Can I detach the primary (ethO) network interface when the instance is running or stopped?
+
+- [ ] Yes, You can.
+- [x] No. You cannot.
+
+
+### You have launched an Amazon Elastic Compute Cloud (EC2) instance into a public subnet with a primary private I P address assigned, an internet gateway is attached to the VPC, and the public route table is configured to send all Internet-based traffic to the Internet gateway. The instance security group is set to allow all outbound traffic but cannot access the internet. Why is the Internet unreachable from this instance?
+
+- [x] The instance does not have a public IP address.
+- [ ] The internet gateway security group must allow all outbound traffic.
+- [ ] The instance security group must allow all inbound traffic.
+- [ ] The instance 'Source/Destination check' property must be enabled.
+
+
+### Which of the following statements best describes the differences between Elastic Beanstalk and CloudFormation?
+
+- [ ] Elastic Beanstalk uses Elastic load balancing and CloudFormation doesn't.
+- [ ] CloudFormation is faster in deploying applications than Elastic Beanstalk.
+- [ ] Elastic Beanstalk is faster in deploying applications than CloudFormation.
+- [x] CloudFormation is much more powerful than Elastic Beanstalk, because you can actually design and script custom resources.
+
+
+### It is advised that you watch the Amazon CloudWatch [...] metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.
+
+- [ ] Write Lag.
+- [ ] Read Replica.
+- [x] Replica Lag.
+- [ ] Single Replica.
+
+
+### Your application provides data transformation services. Files containing data to be transformed are first uploaded to Amazon S3 and then transformed by a fleet of spot EC2 instances. Fi les submitted by your premium customers must be transformed with the highest priority. How should you implement such a system?
+
+- [ ] Use a DynamoDB table with an attribute defining the priority level. Transformation instances will scan the table for tasks, sorting the results by priority level.
+- [ ] Use Route 53 latency based-routing to send high priority tasks to the closest transformation instances.
+- [x] Use two SQS queues, one for high priority messages, the other for default priority. Transformation instances first poll the high priority queue; if there is no message, they poll the default priority queue.
+- [ ] Use a single SQS queue. Each message contains the priority level. Transformation instances poll high-priority messages first.
+
+
+### True or False: When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes.
+
+- [ ] Depends on the instance type.
+- [ ] False.
+- [ ] Depends on whether you use API call.
+- [x] True.
+
+
+### Does AWS CloudFormation support Amazon EC2 tagging?
+
+- [x] Yes, AWS CloudFormation supports Amazon EC2 tagging.
+- [ ] No, CloudFormation doesn't support any tagging.
+- [ ] No, it doesn't support Amazon EC2 tagging.
+- [ ] It depends if the Amazon EC2 tagging has been defined in the template.
+
+
+### If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect?
+
+- [x] Yes.
+- [ ] No.
+
+
+### If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines, you can scale the throughput of your database Instance by specifying the IOPS rate from [...].
+
+- [ ] 1,000 to 100,000.
+- [ ] 100 to 1,000.
+- [ ] 10,000 to 100,000.
+- [x] 1,000 to 10,000.
+
+
+### To specify a resource in a policy statement, in Amazon EC2, can you use its Amazon Resource Name (ARN)?
+
+- [x] Yes, you can.
+- [ ] No, you can't because EC2 is not related to AR
+- [ ] No, you can't because you can't specify a particular Amazon EC2 resource in an IAM policy.
+- [ ] Yes, you can but only for the resources that are not affected by the action.
+
+
+### An enterprise wants to use a third-party SaaS application. The SaaS application needs to have access to issue several API commands to discover Amazon EC2 resources running within the enterprise's account The enterprise has internal security policies that require any outside access to their environment must conform to the principles of least privilege and there must be controls in place to ensure that the credentials used by the 5aa5 vendor cannot be used by any other third party. Which of the following would meet all of these conditions?
+
+- [ ] From the AWS Management Console, navigate to the Security Credentials page and retrieve the access and secret key for your account.
+- [ ] Create an IAM user within the enterprise account assign a user policy to the IAM user that allows only the actions required by the SaaS application create a new access and secret key for the user and provide these credentials to the 5aa5 provider.
+- [x] Create an IAM role for cross-account access allows the SaaS provider's account to assume the role and assign it a policy that allows only the actions required by the SaaS application.
+- [ ] Create an IAM role for EC2 instances, assign it a policy that allows only the actions required tor the Saas application to work, provide the role ARM to the SaaS provider to use when launching their application instances.
+
+
+### By default what are ENIs that are automatically created and attached to instances using the EC2 console set to do when the attached instance terminates?
+
+- [ ] Remain as is.
+- [x] Terminate.
+- [ ] Hibernate.
+- [ ] Pause.
+
+
+### In EC2, what happens to the data in an instance store if an instance reboots (either intentionally or unintentionally)?
+
+- [ ] Data is deleted from the instance store for security reasons.
+- [x] Data persists in the instance store.
+- [ ] Data is partially present in the instance store.
+- [ ] Data in the instance store will be lost.
+
+
+### You are designing a social media site and are considering how to mitigate distributed denial-of service (DDoS) attacks. Which of the below are viable mitigation techniques? (Choose 3 answers)
+
+- [ ] Add multiple elastic network interfaces (ENis) to each EC2 instance to increase the network bandwidth.
+- [ ] Use dedicated instances to ensure that each instance has the maximum performance possible.
+- [x] Use an Amazon CloudFront distribution for both static and dynamic content.
+- [x] Use an Elastic Load Balancer with auto scaling groups at the web. App and Amazon Relational Database Service (RDS) tiers.
+- [x] Add alert Amazon CloudWatch to look for high Network in and CPU utilization.
+- [ ] Create processes and capabilities to quickly add and remove rules to the instance OS firewall.
+
+
+### In Amazon CloudFront, if you use Amazon EC2 instances and other custom origins with CloudFront, it is recommended to [...].
+
+- [ ] not use Elastic Load Balancing.
+- [ ] restrict Internet communication to private instances while allowing outgoing traffic.
+- [ ] enable access key rotation for CloudWatch metrics.
+- [x] specify the URL of the load balancer for the domain name of your origin server.
+
+
+### Which of the following statements is true regarding attaching network interfaces to your instances in your VPC?
+
+- [ ] You can attach 5 ENIs per instance type.
+- [ ] You can attach as many ENIs as you want.
+- [x] The number of ENIs you can attach varies by instance type.
+- [ ] You can attach 100 ENIs total regardless of instance type.
+
+
+### What is the reason for this?
+
+- [ ] For security reasons.
+- [ ] Hardware restrictions.
+- [x] Public (IPV4) internet addresses are a scarce resource.
+- [ ] There are only 5 network interfaces per instance.
+
+
+### Can a 'user' be associated with multiple AWS accounts?
+
+- [x] Yes.
+- [ ] No.
+
+
+### You have an application running on an Amazon Elastic Compute Cloud instance, that uploads 5 GB video objects to Amazon Simple Storage Service (S3). Video uploads are taking longer than expected, resulting in poor application performance. Which method will help improve performance of your application?
+
+- [ ] Enable enhanced networking.
+- [x] Use Amazon S3 multipart upload.
+- [ ] Leveraging Amazon CloudFront, use the HTTP POST method to reduce latency.
+- [ ] Use Amazon Elastic Block Store Provisioned IOPs and use an Amazon EBS-optimized instance.
+
+
+### You have been given a scope to set up an AWS Media Sharing Framework for a new start up photo sharing company similar to flickr. The first thing that comes to mind about this is that it will obviously need a huge amount of persistent data storage for this framework. Which of the following storage options would be appropriate for persistent storage?
+
+- [ ] Amazon Glacier or Amazon S3.
+- [ ] Amazon Glacier or AWS Import/Export.
+- [ ] AWS Import/Export or Amazon CloudFront.
+- [x] Amazon EBS volumes or Amazon S3.
+
+
+### You need a persistent and durable storage to trace call activity of an IVR (Interactive Voice Response) system. Call duration is mostly in the 2-3 minutes timeframe. Each traced call can be either active or terminated. An external application needs to know each minute the list of currently active calls, which are usually a few calls/second. Put once per month there is a periodic peak up to 1000 calls/second for a few hours. The system is open 24/7 and any downtime should be avoided. Historical data is periodically archived to files. Cost saving is a priority for this project. What database implementation would better fit this scenario, keeping costs as low as possible?
+
+- [x] Use RDS Multi-AZ with two tables, one for 'Active calls' and one for 'Terminated calls'. in this way the 'Active calls' table is always small and effective to access.
+- [ ] Use DynamoDB with a 'Calls' table and a Global Secondary Index on a 'lsActive' attribute that is present for active calls only in this way the Global Secondary index is sparse and more effective.
+- [ ] Use DynamoDB with a 'Calls' table and a Global secondary index on a 'State' attribute that can equal to 'active' or 'terminated' in this way the Global Secondary index can be used for all Items in the table.
+- [ ] Use RDS Multi-AZ with a 'CALLS' table and an Indexed 'STATE* field that can be equal to 'ACTIVE' or 'TERMINATED' in this way the SOL query Is optimized by the use of the Index.
+
+
+### If you have chosen Multi-AZ deployment, in the event of a planned or unplanned outage of your primary DB Instance, Amazon RDS automatically switches to the standby replica. The automatic failover mechanism simply changes the record of the main DB Instance to point to the standby DB Instance.
+
+- [ ] DNAME.
+- [x] CNAME.
+- [ ] TXT.
+- [ ] MX.
+
+
+### All Amazon EC2 instances are assigned two IP addresses at launch. Which are those?
+
+- [ ] 2 Elastic IP addresses.
+- [ ] A private IP address and an Elastic IP address.
+- [ ] A public IP address and an Elastic IP address.
+- [x] A private IP address and a public IP address.
+
+
+### You need to pass a custom script to new Amazon Linux instances created in your Auto Scaling group. Which feature allows you to accomplish this?
+
+- [x] User data.
+- [ ] EC2Config service.
+- [ ] IAM roles.
+- [ ] AWS Config.
+
+
+### A customer wants to track access to their Amazon Simple Storage Service (S3) buckets and also use this information for their internal security and access audits. Which of the following will meet the Customer requirement?
+
+- [x] Enable AWS CloudTrail to audit all Amazon S3 bucket access.
+- [ ] Enable server access logging for all required Amazon S3 buckets.
+- [ ] Enable the Requester Pays option to track access via AWS Billing.
+- [ ] Enable Amazon S3 event notifications for Put and Post.
+
+
+### Which DNS name can only be resolved within Amazon EC2?
+
+- [ ] Public DNS name.
+- [x] Internal DNS name.
+- [ ] External DNS name.
+- [ ] Global DNS name.
+
+
+### An AWS customer is deploying an application mat is composed of an AutoScaling group of EC2 Instances. The customers security policy requires that every outbound connection from these instances to any other service within the customers Virtual Private Cloud must be authenticated using a unique x 509 certificate that contains the specific instance-id. In addition an x 509 certificates must Designed by the customer's Key management service in order to be trusted for authentication. Which of the following configurations will support these requirements?
+
+- [ ] Configure an IAM Role that grants access to an Amazon S3 object containing a signed certificate and configure me Auto Scaling group to launch instances with this role Have the instances bootstrap get the certificate from Amazon S3 upon first boot.
+- [ ] Embed a certificate into the Amazon Machine Image that is used by the Auto Scaling group Have the launched instances generate a certificate signature request with the instance's assigned instance- id to the Key management service for signature.
+- [x] Configure the Auto Scaling group to send an SNS notification of the launch of a new instance to the trusted key management service. Have the Key management service generate a signed certificate and send it directly to the newly launched instance.
+- [ ] Configure the launched instances to generate a new certificate upon first boot Have the Key management service poll the AutoScaling group for associated instances and send new instances a certificate signature (hat contains the specific instance-id.
+
+
+### A company is storing data on Amazon Simple Storage Service (S3). The company's security policy mandates that data is encrypted at rest. Which of the following methods can achieve this? (Choose 3 answers)
+
+- [x] Use Amazon S3 server-side encryption with AWS Key Management Service managed keys.
+- [x] Use Amazon S3 server-side encryption with customer-provided keys.
+- [ ] Use Amazon S3 server-side encryption with EC2 key pair.
+- [ ] Use Amazon S3 bucket policies to restrict access to the data at rest.
+- [x] Encrypt the data on the client-side before ingesting to Amazon S3 using their own master key.
+- [ ] Use SSL to encrypt the data while in transit to Amazon S3.
+
+
+### In Amazon EC2, you are billed instance-hours when [...].
+
+- [x] your EC2 instance is in a running state.
+- [ ] the instance exits from Amazon S3 console.
+- [ ] your instance still exits the EC2 console.
+- [ ] EC2 instances stop.
+
+
+### Which of the below mentioned options is a possible solution to avoid any security threat?
+
+- [ ] Use the IAM based single sign between the AWS resources and the organization application.
+- [x] Use the IAM role and assign it to the instance.
+- [ ] Since the application is hosted on EC2, it does not need credentials to access S3.
+- [ ] Use the 509 certificates instead of the access and the secret access keys.
+
+
+### In Amazon EC2 Container Service components, what is the name of a logical grouping of container instances on which you can place tasks?
+
+- [x] A cluster.
+- [ ] A container instance.
+- [ ] A container.
+- [ ] A task definition.
+
+
+### You are looking to migrate your Development (Dev) and Test environments to AWS. You have decided to use separate AWS accounts to host each environment. You plan to link each accounts bill to a Master AWS account using Consolidated Billing. To make sure you Keep within budget you would like to implement a way for administrators in the Master account to have access to stop, delete and/or terminate resources in both the Dev and Test accounts. Identify which option will allow you to achieve this goal.
+
+- [ ] Create IAM users in the Master account with full Admin permissions. Create cross-account roles in the Dev and Test accounts that grant the Master account access to the resources in the account by inheriting permissions from the Master account.
+- [ ] Create IAM users and a cross-account role in the Master account that grants full Admin permissions to the Dev and Test accounts.
+- [x] Create IAM users in the Master account Create cross-account roles in the Dev and Test accounts that have full Admin permissions and grant the Master.
+- [ ] Link the accounts using Consolidated Billing. This will give IAM users in the Master account access to resources in the Dev and Test accounts.
+
+

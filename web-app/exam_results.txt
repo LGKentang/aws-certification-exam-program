@@ -4,3 +4,9 @@
 1#92.00%#Varrent
 3#70.00%#Varrent
 4#80.00%#Varrent
+5#76.00%#Vege
+6#72.00%#Varrent
+
+1#54.00%#bapuk
+3#98.00%#LGK
+2#68.00%#bapuk

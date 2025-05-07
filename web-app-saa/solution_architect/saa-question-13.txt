@@ -1,0 +1,402 @@
+### Is it possible to access your EBS snapshots?
+
+- [ ] Yes, through the Amazon S3 APIs.
+- [x] Yes, through the Amazon EC2 APIs.
+- [ ] No, EBS snapshots cannot be accessed; they can only be used to create a new EBS volume.
+- [ ] EBS doesn't provide snapshots.
+
+
+### How many types of block devices does Amazon EC2 support?
+
+- [ ] 4.
+- [ ] 5.
+- [x] 2.
+- [ ] 1.
+
+
+### SQL Server [...] store log ins and passwords in the master database.
+
+- [ ] can be configured to but by default does not.
+- [ ] doesn't.
+- [x] does.
+
+
+### You are using an m1.small EC2 Instance with one 300GB EBS volume to host a relational database. You determined that write throughput to the database needs to be increased. Which of the following approaches can help achieve this? (Choose 2 answers)
+
+- [x] Use an array of EBS volumes.
+- [ ] Enable Multi-AZ mode.
+- [ ] Place the instance in an Auto Scaling Groups.
+- [ ] Add an EBS volume and place into RAID 5.
+- [x] Increase the size of the EC2 Instance.
+- [ ] Put the database behind an Elastic Load Balancer.
+
+
+### A user is hosting a website in the US West-1 region. The website has the highest client base from the Asia-Pacific (Singapore / Japan) region. The application is accessing data from S3 before serving it to client. Which of the below mentioned regions gives a better performance for S3 objects?
+
+- [ ] Japan.
+- [ ] Singapore.
+- [ ] US East.
+- [x] US West-1.
+
+
+### You need to set up security for your VPC and you know that Amazon VPC provides two features that you can use to increase security for your VPC: Security groups and network access control lists (ACLs). You start to look into security groups first. Which statement below is incorrect in relation to security groups?
+
+- [ ] Are stateful: Return traffic is automatically allowed, regardless of any rules.
+- [ ] Evaluate all rules before deciding whether to allow traffic.
+- [x] Support allow rules and deny rules.
+- [ ] Operate at the instance level (first layer of defense).
+
+
+### Can a single EBS volume be attached to multiple EC2 instances at the same time?
+
+- [ ] Yes.
+- [x] No.
+- [ ] Only for high-performance EBS volumes.
+- [ ] Only when the instances are located in the US regions.
+
+
+### You are planning and configuring some EBS volumes for an application. in order to get the most performance out of your EBS volumes, you should attach them to an instance with enough [...] to support your volumes.
+
+- [ ] redundancy.
+- [ ] storage.
+- [x] bandwidth.
+- [ ] memory.
+
+
+### An organization has three separate AWS accounts, one each for development, testing, and production. The organization wants the testing team to have access to certain AWS resources in the production account. How can the organization achieve this?
+
+- [ ] It is not possible to access resources of one account with another account.
+- [x] Create the IAM roles with cross account access.
+- [ ] Create the IAM user in a test account, and allow it access to the production environment with the IAM policy.
+- [ ] Create the IAM users with cross account access.
+
+
+### A benefits enrollment company is hosting a 3-tier web application running in a VPC on AWS which includes a NAT (Network Address Translation) instance in the public Web tier. There is enough provisioned capacity for the expected workload tor the new fiscal year benefit enrollment period plus some extra overhead Enrollment proceeds nicely for two days and then the web tier becomes unresponsive, upon investigation using CloudWatch and other monitoring tools it is discovered that there is an extremely large and unanticipated amount of inbound traffic coming from a set of 15specific IP addresses over port 80 from a country where the benefits company has no customers. The web tier instances are so overloaded that benefit enrollment administrators cannot even SSH into them. Which activity would be useful in defending against this attack?
+
+- [ ] Create a custom route table associated with the web tier and block the attacking IP addresses from the IGW (Internet Gateway).
+- [ ] Change the EIP (Elastic IP Address) of the NAT instance in the web tier subnet and update the Main Route Table with the new EIP.
+- [ ] Create 15 Security Group rules to block the attacking IP addresses over port 80.
+- [x] Create an inbound NACL (Network Access control list) associated with the web tier subnet with deny rules to block the attacking IP addresses.
+
+
+### You launch an Amazon EC2 instance without an assigned AVVS identity and Access Management (IAM) role. Later, you decide that the instance should be running with an IAM role. Which action must you take in order to have a running Amazon EC2 instance with an IAM role assigned to it?
+
+- [ ] Create an image of the instance, and register the image with an IAM role assigned and an Amazon EBS volume mapping.
+- [ ] Create a new IAM role with the same permissions as an existing IAM role, and assign it to the running instance.
+- [ ] Create an image of the instance, add a new IAM role with the same permissions as the desired IAM role, and deregister the image with the new role assigned.
+- [x] Create an image of the instance, and use this image to launch a new instance with the desired Lam role assigned.
+
+
+### Does AWS Direct Connect allow you access to all Availabilities Zones within a Region?
+
+- [x] Depends on the type of connection.
+- [ ] Yes.
+- [ ] No.
+- [ ] Only when there's just one Availability Zone in a region. If there are more than one, only one availability zone can be accessed directly.
+
+
+### What is the durability of S3 RRS?
+
+- [x] 99.99%.
+- [ ] 99.95%.
+- [ ] 99.995%.
+- [ ] 99.999999999%.
+
+
+### Your organization is in the business of architecting complex transactional databases. For a variety of reasons, this has been done on EBS. What is AWS's recommendation for customers who have architected databases using EBS for backups?
+
+- [x] Backups to Amazon S3 be performed through the database management system.
+- [ ] Backups to AWS Storage Gateway be performed through the database management system.
+- [ ] If you take regular snapshots no further backups are required.
+- [ ] Backups to Amazon Glacier be performed through the database management system.
+
+
+### You need to create a load balancer in a VPC network that you are building. You can make your load balancer internal (private) or internet-facing (public). When you make your load balancer internal, a DNS name will be created, and it will contain the private IP address of the load balancer. An internal load balancer is not exposed to the internet. When you make your load balancer internet-facing, a DNS name will be created with the public IP address. If you want the Internet-facing load balancer to be connected to the Internet, where must this load balancer reside?
+
+- [x] The load balancer must reside in a subnet that is connected to the internet using the internet gateway.
+- [ ] The load balancer must reside in a subnet that is not connected to the internet.
+- [ ] The load balancer must not reside in a subnet that is connected to the internet.
+- [ ] The load balancer must be completely outside of your IP.
+
+
+### In the Amazon CloudWatch, which metric should I be checking to ensure that your DB Instance has enough free storage space?
+
+- [ ] Free Storage.
+- [x] Free Storage Space.
+- [ ] Free Storage Volume.
+- [ ] Free DB Storage Space.
+
+
+### A web-startup runs its very successful social news application on Amazon EC2 with an Elastic Load Balancer, an Auto-Scaling group of Java/Tomcat application-servers, and DynamoDB as data store. The main web-application best runs on m2 x large instances since it is highly memory- bound Each new deployment requires semi-automated creation and testing of a new AMI for the application servers which takes quite a while ana is therefore only done once per week. Recently, a new chat feature has been implemented in nodejs and wails to be integrated in the architecture. First tests show that the new component is CPU bound Because the company has some experience with using Chef, they decided to streamline the deployment process and use AWS OpsWorks as an application life cycle tool to simplify management of the application and reduce the deployment cycles. What configuration in AWS OpsWorks is necessary to integrate the new chat module in the most cost-efficient and flexible way?
+
+- [ ] Create one AWS OpsWorks stack, create one AWS OpsWorks layer, create one custom recipe.
+- [ ] Create one AWS OpsWorks stack create two AWS OpsWorks layers create one custom recipe.
+- [x] Create two AWS OpsWorks stacks create two AWS OpsWorks layers create one custom recipe.
+- [ ] Create two AWS OpsWorks stacks create two AWS OpsWorks layers create two custom recipe.
+
+
+### A client needs you to import some existing infrastructure from a dedicated hosting provider to AWS to try and save on the cost of running his current website. He also needs an automated process that manages backups, software patching, automatic failure detection, and recovery. You are aware that his existing set up currently uses an Oracle database. Which of the following AWS databases would be best for accomplishing this task?
+
+- [x] Amazon RDS.
+- [ ] Amazon Redshift.
+- [ ] Amazon SimpleDB.
+- [ ] Amazon ElastiCache.
+
+
+### A user is currently building a website which will require a large number of instances in six months, when a demonstration of the new site will be given upon launch. Which of the below mentioned options allows the user to procure the resources beforehand so that they need not worry about infrastructure availability during the demonstration?
+
+- [x] Procure all the instances as reserved instances beforehand.
+- [ ] Launch all the instances as part of the cluster group to ensure resource availability.
+- [ ] Pre-warm all the instances one month prior to ensure resource availability.
+- [ ] Ask AWS now to procure the dedicated instances in 6 months.
+
+
+### Amazon RDS creates an SSL certificate and installs the certificate on the DB Instance when Amazon RDS provisions the instance. These certificates are signed by a certificate authority. The [...] is stored at <https://rds.amazonaws.com/doc/rds-ssl-ca-cert.pem>.
+
+- [x] private key.
+- [ ] foreign key.
+- [ ] public key.
+- [ ] protected key.
+
+
+### What happens to data on an ephemeral volume of an EBS-backed EC2 instance if it is terminated or if it fails?
+
+- [ ] Data is automatically copied to another volume.
+- [ ] The volume snapshot is saved in S3.
+- [ ] Data persists.
+- [x] Data is deleted.
+
+
+### You manually launch a NAT AMI in a public subnet. The network is properly configured. Security groups and network access control lists are property configured. Instances in a private subnet can access the NAT. The NAT can access the Internet. However, private instances cannot access the Internet. What additional step is required to allow access from the private instances?
+
+- [ ] Enable Source/Destination Check on the private Instances.
+- [x] Enable Source/Destination Check on the NAT instance.
+- [ ] Disable Source/Destination Check on the private instances.
+- [ ] Disable Source/Destination Check on the NAT instance.
+
+
+### You have just discovered that you can upload your objects to Amazon S3 using Multipart Upload API. You start to test it out but are unsure of the benefits that it would provide. Which of the following is not a benefit of using multipart uploads?
+
+- [ ] You can begin an upload before you know the final object size.
+- [ ] Quick recovery from any network issues.
+- [ ] Pause and resume object uploads.
+- [x] It's more secure than normal upload.
+
+
+### To help you manage your Amazon EC2 instances, images, and other Amazon EC2 resources, you can assign your own metadata to each resource in the form of [...].
+
+- [ ] special filters.
+- [ ] functions.
+- [x] tags.
+- [ ] wildcards.
+
+
+### Do the Amazon EBS volumes persist independently from the running life of an Amazon EC2 instance?
+
+- [ ] No.
+- [ ] Only if instructed to when created.
+- [x] Yes.
+
+
+### If I write the below command, what does it do? ec2-run ami-e3a5408a -n 20 -g appserver
+
+- [x] Start twenty instances as members of appserver group.
+- [ ] Creates 20 rules in the security group named appserver.
+- [ ] Terminate twenty instances as members of appserver group.
+- [ ] Start 20 security groups.
+
+
+### A company is deploying a new two-tier web application in AWS. The company has limited staff and requires high availability, and the application requires complex queries and table joins. Which configuration provides the solution for the company's requirements?
+
+- [ ] MySQL Installed on two Amazon EC2 Instances in a single Availability Zone.
+- [x] Amazon RDS for MySQL with Multi-AZ.
+- [ ] Amazon ElastiCache
+- [ ] Amazon DynamoDB.
+
+
+### In order to optimize performance for a compute cluster that requires low inter-node latency, which of the following feature should you use?
+
+- [ ] Multiple Availability Zones.
+- [ ] AWS Direct Connect.
+- [ ] EC2 Dedicated Instances.
+- [x] Placement Groups.
+- [ ] VPC private subnets.
+
+
+### Regarding the attaching of ENI to an instance, what does 'warm attach' refer to?
+
+- [x] Attaching an ENI to an instance when it is stopped.
+- [ ] This question doesn't make sense.
+- [ ] Attaching an ENI to an instance when it is running.
+- [ ] Attaching an ENI to an instance during the launch process.
+
+
+### Can I attach more than one policy to a particular entity?
+
+- [x] Yes always.
+- [ ] Only if within GovCloud.
+- [ ] No.
+- [ ] Only if within VPC.
+
+
+### By default, when an EBS volume is attached to a Windows instance, it may show up as any drive letter on the instance. You can change the settings of the [...] Service to set the drive letters of the EBS volumes per your specifications.
+
+- [ ] EBS Config Service.
+- [ ] AMI Config Service.
+- [x] EC2 Config Service.
+- [ ] EC2-AMI Config Service.
+
+
+### Select the correct set of steps for exposing the snapshot only to specific AWS accounts.
+
+- [ ] Select public for all the accounts and check mark t hose accounts with whom you want to expose the snapshots and cl ick save.
+- [ ] Select Private, enter the IDs of t hose AWS accounts, and click Save.
+- [x] Select Public, enter the IDs of those AWS accounts, and click Save.
+- [ ] Select Public, mark the IDs of those AWS accounts as private, and click Save.
+
+
+### How can you apply more than 100 rules to an Amazon EC2-Classic?
+
+- [ ] By adding more security groups.
+- [ ] You need to create a default security group specifying your required rules if you need to use more than 100 rules per security group.
+- [ ] By default the Amazon EC2 security groups support 500 rules.
+- [x] You can't add more than 100 rules to security groups for an Amazon EC2 instance.
+
+
+### A user has created an ELB with Auto Scaling. Which of the below mentioned offerings from ELB helps the user to stop sending new requests traffic from the load balancer to the EC2 instance when the instance is being deregistered while continuing in-flight requests?
+
+- [ ] ELB sticky session.
+- [ ] ELB deregistration check.
+- [ ] ELB auto registration Off.
+- [x] ELB connection draining.
+
+
+### What can I access by visiting the URL: http://status.aws.amazon.com/?
+
+- [ ] Amazon Cloud Watch.
+- [ ] Status of the Amazon RDS DB.
+- [x] AWS Service Health Dashboard.
+- [ ] AWS Cloud Monitor.
+
+
+### In Route 53, what does a Hosted Zone refer to?
+
+- [ ] A hosted zone is a collection of geographical load balancing rules for Route 53.
+- [x] A hosted zone is a collection of resource record sets hosted by Route 53.
+- [ ] A hosted zone is a selection of specific resource record sets hosted by CloudFront for distribution to Route 53.
+- [ ] A hosted zone is the Edge Location that hosts the Route 53 records for a user.
+
+
+### A user is launching an EC2 instance in the US East region. Which of the below mentioned options is recommended by AWS with respect to the selection of the Availability Zone?
+
+- [ ] Always select the AZ while launching an instance.
+- [ ] Always select the US-East-1-a zone for HA.
+- [x] Do not select the AZ; instead let AWS select the AZ.
+- [ ] The user can never select the Availability Zone while launching an instance.
+
+
+### ec2-revoke RevokeSecurityGroup Ingress
+
+- [ ] Removes one or more security groups from a rule.
+- [ ] Removes one or more security groups from an Amazon EC2 instance.
+- [x] Removes one or more rules from a security group.
+- [ ] Removes a security group from our account.
+
+
+### Select the correct statement.
+
+- [ ] You don't need not specify the resource identifier while stopping a resource.
+- [ ] You can terminate, stop, or delete a resource based solely on its tags.
+- [x] You can't terminate, stop, or delete a resource based solely on its tags.
+- [ ] You don't need to specify the resource identifier while terminating a resource.
+
+
+### What is the time period with which metric data is sent to CloudWatch when detailed monitoring is enabled on an Amazon EC2 instance?
+
+- [ ] 15 minutes.
+- [ ] 5 minutes.
+- [x] 1 minute.
+- [ ] 45 seconds.
+
+
+### A large real -estate brokerage is exploring the option of adding a cost-effective location based alert to their existing mobile application The application backend infrastructure currently runs on AWS Users who opt in to this service will receive alerts on their mobile device regarding real-estate otters in proximity to their location. For the alerts to be relevant delivery time needs to be in the low minute count the existing mobile app has 5 million users across the us. Which one of the following architectural suggestions would you make to the customer?
+
+- [x] The mobile application will submit its location to a web service endpoint utilizing Elastic Load Balancing and EC2 instances: DynamoDB will be used to store and retrieve relevant otters EC2 instances will communicate with mobile earners/device providers to push alerts back to mobile application.
+- [ ] Use AWS DirectConnect or VPN to establish connectivity with mobile carriers EC2 instances will receive the mobile applications' location through carrier connection: RDS will be used to store and relevant relevant offers EC2 instances will communicate with mobile carriers to push alerts back to the mobile application.
+- [ ] The mobile application will send device location using SQS.
+- [ ] EC2 instances will retrieve the re levant others from DynamoDB AWS Mobile Push will be used to send offers to the mobile application to push alerts back to the mobile application.
+- [ ] The mobile application will send device location using AWS Mobile Push EC2 instances will retrieve the relevant offers from DynamoDB EC2 instances will communicate with mobile carriers/device providers to push alerts back to the mobile application.
+
+
+### You are running PostgreSQL on Amazon RDS and it seems to be all running smoothly deployed in one Availability Zone. A database administrator asks you if DB instances running PostgreSQL support Multi-AZ deployments. What would be a correct response to this question?
+
+- [x] Yes.
+- [ ] Yes but only for small db instances.
+- [ ] No.
+- [ ] Yes but you need to request the service from AWS.
+
+
+### What is the data model of DynamoDB?
+
+- [ ] Since DynamoDB is schema-less, there is no data model.
+- [ ] 'Items', with Keys and one or more Attribute; and 'Attribute', with Name and Value.
+- [x] 'Table', a collection of Items; 'Items', with Keys and one or more Attribute; and 'Attribute', with Name and Value.
+- [ ] 'Database', which is a set of 'Tables', which is a set of 'Items', which is a set of 'Attributes'.
+
+
+### What is a placement group in Amazon EC2?
+
+- [x] It is a group of EC2 instances within a single Availability Zone.
+- [ ] It the edge location of your web content.
+- [ ] It is the AWS region where you run the EC2 instance of your web content.
+- [ ] It is a group used to span multiple Availability Zones.
+
+
+### A company is running an SMB file server in its data center. The file server stores large files that are accessed frequently for the first few days after the files are created. After 7 days the files are rarely accessed. The total data size is increasing and is close to the company's total storage capacity. A solutions architect must increase the company's available storage space without losing low-latency access to the most recently accessed files. The solutions architect must also provide file lifecycle management to avoid future storage issues.Which solution will meet these requirements?
+
+- [ ] Use AWS DataSync to copy data that is older than 7 days from the SMB file server to AWS.
+- [ ] Create an Amazon S3 File Gateway to extend the company's storage space. Create an S3 Lifecycle policy to transition the data to S3 Glacier Deep Archive after 7 days.
+- [ ] Create an Amazon FSx for Windows File Server file system to extend the company's storage space.
+- [x] Install a utility on each user's computer to access Amazon S3. Create an S3 Lifecycle policy to transition the data to S3 Glacier Flexible Retrieval after 7 days.
+
+
+### A large company wants to provide its globally located developers separate, limited size, managed PostgreSQL databases for development purposes. The databases will be low volume. The developers need the databases only when they are actively working.Which solution will meet these requirements MOST cost-effectively?
+
+- [ ] Give the developers the ability to launch separate Amazon Aurora instances. Set up a process to shut down Aurora instances at the end of the workday and to start Aurora instances at the beginning of the next workday.
+- [ ] Develop an AWS Service Catalog product that enforces size restrictions for launching Amazon Aurora instances. Give the developers access to launch the product when they need a development database.
+- [x] Create an Amazon Aurora Serverless cluster. Develop an AWS Service Catalog product to launch databases in the cluster with the default capacity settings. Grant the developers access to the product.
+- [ ] Monitor AWS Trusted Advisor checks for idle Amazon RDS databases. Create a process to terminate identified idle RDS databases.
+
+
+### A company is building a web application that serves a content management system. The content management system runs on Amazon EC2 instances behind an Application Load Balancer (ALB). The EC2 instances run in an Auto Scaling group across multiple Availability Zones. Users are constantly adding and updating files, blogs, and other website assets in the content management system. A solutions architect must implement a solution in which all the EC2 instances share up-to-date website content with the least possible lag time. Which solution meets these requirements?
+
+- [ ] Update the EC2 user data in the Auto Scaling group lifecycle policy to copy the website assets from the EC2 instance that was launched most recently. Configure the ALB to make changes to the website assets only in the newest EC2 instance.
+- [x] Copy the website assets to an Amazon Elastic File System (Amazon EFS) file system. Configure each EC2 instance to mount the EFS file system locally. Configure the website hosting application to reference the website assets that are stored in the EFS file system.
+- [ ] Copy the website assets to an Amazon S3 bucket. Ensure that each EC2 instance downloads the website assets from the S3 bucket to the attached Amazon Elastic Block Store (Amazon EBS) volume. Run the S3 sync command once each hour to keep files up to date.
+- [ ] Restore an Amazon Elastic Block Store (Amazon EBS) snapshot with the website assets. Attach the EBS snapshot as a secondary EBS volume when a new EC2 instance is launched. Configure the website hosting application to reference the website assets that are stored in the secondary EBS volume.
+
+
+### A company's web application consists of multiple Amazon EC2 instances that run behind an Application Load Balancer in a VPC. An Amazon RDS for MySQL DB instance contains the data. The company needs the ability to automatically detect and respond to suspicious or unexpected behavior in its AWS environment. The company already has added AWS WAF to its architecture. What should a solutions architect do next to protect against threats?
+
+- [x] Use Amazon GuardDuty to perform threat detection. Configure Amazon EventBridge (Amazon CloudWatch Events) to filter for GuardDuty findings and to invoke an AWS Lambda function to adjust the AWS WAF rules.
+- [ ] Use AWS Firewall Manager to perform threat detection. Configure Amazon EventBridge (Amazon CloudWatch Events) to filter for Firewall Manager findings and to invoke an AWS Lambda function to adjust the AWS WAF web ACL.
+- [ ] Use Amazon Inspector to perform threat detection and to update the AWS WAF rules. Create a VPC network ACL to limit access to the web application.
+- [ ] Use Amazon Macie to perform threat detection and to update the AWS WAF rules. Create a VPC network ACL to limit access to the web application.
+
+
+### A company is planning to run a group of Amazon EC2 instances that connect to an Amazon Aurora database. The company has built an AWS CloudFormation template to deploy the EC2 instances and the Aurora DB cluster. The company wants to allow the instances to authenticate to the database in a secure way. The company does not want to maintain static database credentials. Which solution meets these requirements with the LEAST operational effort?
+
+- [ ] Create a database user with a user name and password. Add parameters for the database user name and password to the CloudFormation template. Pass the parameters to the EC2 instances when the instances are launched.
+- [ ] Create a database user with a user name and password. Store the user name and password in AWS Systems Manager Parameter Store. Configure the EC2 instances to retrieve the database credentials from Parameter Store.
+- [x] Configure the DB cluster to use IAM database authentication. Create a database user to use with IAM authentication. Associate a role with the EC2 instances to allow applications on the instances to access the database.
+- [ ] Configure the DB cluster to use IAM database authentication with an IAM user. Create a database user that has a name that matches the IAM user. Associate the IAM user with the EC2 instances to allow applications on the instances to access the database.
+
+
+### A company wants to configure its Amazon CloudFront distribution to use SSL/TLS certificates. The company does not want to use the default domain name for the distribution. Instead, the company wants to use a different domain name for the distribution. Which solution will deploy the certificate without incurring any additional costs?
+
+- [ ] Request an Amazon issued private certificate from AWS Certificate Manager (ACM) in the us-east-1 Region.
+- [ ] Request an Amazon issued private certificate from AWS Certificate Manager (ACM) in the us-west-1 Region.
+- [x] Request an Amazon issued public certificate from AWS Certificate Manager (ACM) in the us-east-1 Region.
+- [ ] Request an Amazon issued public certificate from AWS Certificate Manager (ACM) in the us-west-1 Region.
+
+
